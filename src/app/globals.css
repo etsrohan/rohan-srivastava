@@ -48,46 +48,46 @@
 
   /* Base colors for dark theme (default) */
   --background: #000000; /* Black background */
-  --foreground: #39ff14; /* Neon green foreground */
+  --foreground: #22c55e; /* Green-500 foreground */
 
   /* Card & Popover */
   --card: #000000;
-  --card-foreground: #39ff14;
+  --card-foreground: #22c55e;
   --popover: #000000;
-  --popover-foreground: #39ff14;
+  --popover-foreground: #22c55e;
 
   /* Primary and accent colors */
-  --primary: #39ff14;
+  --primary: #22c55e;
   --primary-foreground: #000000;
-  --secondary: #39ff14;
+  --secondary: #22c55e;
   --secondary-foreground: #000000;
   --muted: #000000;
-  --muted-foreground: #39ff14;
-  --accent: #39ff14;
+  --muted-foreground: #22c55e;
+  --accent: #22c55e;
   --accent-foreground: #000000;
 
   /* Additional UI elements */
   --destructive: #ff073a; /* Optional destructive red */
-  --border: #39ff14;
+  --border: #22c55e;
   --input: #000000;
-  --ring: #39ff14;
+  --ring: #22c55e;
 
-  /* Chart colors (using neon green for simplicity) */
-  --chart-1: #39ff14;
-  --chart-2: #39ff14;
-  --chart-3: #39ff14;
-  --chart-4: #39ff14;
-  --chart-5: #39ff14;
+  /* Chart colors (using green-500 for simplicity) */
+  --chart-1: #22c55e;
+  --chart-2: #22c55e;
+  --chart-3: #22c55e;
+  --chart-4: #22c55e;
+  --chart-5: #22c55e;
 
   /* Sidebar */
   --sidebar: #000000;
-  --sidebar-foreground: #39ff14;
-  --sidebar-primary: #39ff14;
+  --sidebar-foreground: #22c55e;
+  --sidebar-primary: #22c55e;
   --sidebar-primary-foreground: #000000;
-  --sidebar-accent: #39ff14;
+  --sidebar-accent: #22c55e;
   --sidebar-accent-foreground: #000000;
-  --sidebar-border: #39ff14;
-  --sidebar-ring: #39ff14;
+  --sidebar-border: #22c55e;
+  --sidebar-ring: #22c55e;
 }
 
 /* The .dark block is removed to enforce dark theme as the default */
