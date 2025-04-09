@@ -16,7 +16,7 @@ export default function Home() {
           {/* About Section */}
           <section
             id="about"
-            className="w-2xl min-h-screen p-8 flex flex-col justify-center"
+            className="w-full min-h-screen p-8 flex flex-col justify-center"
           >
             <h2 className="text-2xl font-bold">About Me</h2>
             <p>
@@ -29,7 +29,7 @@ export default function Home() {
           {/* Projects Section */}
           <section
             id="projects"
-            className="w-2xl min-h-screen p-8 flex flex-col justify-center"
+            className="w-full min-h-screen p-8 flex flex-col justify-center"
           >
             <h2 className="text-2xl font-bold">Projects</h2>
             <p>
@@ -41,7 +41,7 @@ export default function Home() {
           {/* Blog Section */}
           <section
             id="blog"
-            className="w-2xl min-h-screen p-8 flex flex-col justify-center"
+            className="w-full min-h-screen p-8 flex flex-col justify-center"
           >
             <h2 className="text-2xl font-bold">Blog</h2>
             <p>
@@ -53,7 +53,7 @@ export default function Home() {
           {/* Contact Section */}
           <section
             id="contact"
-            className="w-2xl min-h-screen p-8 flex flex-col justify-center"
+            className="w-full min-h-screen p-8 flex flex-col justify-center"
           >
             <h2 className="text-2xl font-bold">Contact</h2>
             <p>
