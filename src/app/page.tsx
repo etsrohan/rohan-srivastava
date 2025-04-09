@@ -1,47 +1,48 @@
-import { HeroSection } from "@/components/elements/hero-section";
-
+import { ExperienceSection } from "@/components/elements/experience/experience-section";
+import { HeroSection } from "@/components/elements/hero/hero-section";
+import { SkillsSection } from "@/components/elements/skill/skills-section";
+import { ProjectsSection } from "@/components/elements/projects/projects-section";
 export default function Home() {
   return (
     <>
       {/* Hero Section */}
       <div className="w-full font-sans bg-background">
-        <main className="flex flex-col gap-[32px] items-center w-full h-full">
+        <main className="flex flex-col gap-[0px] items-center w-full h-full">
           <section
             id="hero"
-            className="w-full min-h-screen flex flex-col justify-center"
+            className="w-full min-h-screen p-0 m-0 flex flex-col justify-center"
           >
             <HeroSection />
           </section>
 
-          {/* About Section */}
+          {/* Experience Section */}
           <section
-            id="about"
-            className="w-full min-h-screen p-8 flex flex-col justify-center"
+            id="experience"
+            className="w-full h-auto p-0 m-0 flex flex-col justify-center items-center"
           >
-            <h2 className="text-2xl font-bold">About Me</h2>
-            <p>
-              I am a seasoned developer with over 10 years of experience in
-              frontend development, specializing in modern web technologies and
-              building scalable applications.
-            </p>
+            <ExperienceSection />
+          </section>
+
+          {/* Skills Section */}
+          <section
+            id="skills"
+            className="w-full h-auto p-0 m-0 flex flex-col justify-center items-center"
+          >
+            <SkillsSection />
           </section>
 
           {/* Projects Section */}
           <section
             id="projects"
-            className="w-full min-h-screen p-8 flex flex-col justify-center"
+            className="w-full h-auto p-0 m-0 flex flex-col justify-center items-center"
           >
-            <h2 className="text-2xl font-bold">Projects</h2>
-            <p>
-              Explore some of the projects I have worked on. From innovative web
-              apps to complex software solutions, see what I have built.
-            </p>
+            <ProjectsSection />
           </section>
 
           {/* Blog Section */}
           <section
             id="blog"
-            className="w-full min-h-screen p-8 flex flex-col justify-center"
+            className="w-full h-auto p-0 m-0 flex flex-col justify-center items-center"
           >
             <h2 className="text-2xl font-bold">Blog</h2>
             <p>
@@ -53,7 +54,7 @@ export default function Home() {
           {/* Contact Section */}
           <section
             id="contact"
-            className="w-full min-h-screen p-8 flex flex-col justify-center"
+            className="w-full h-auto p-0 m-0 flex flex-col justify-center items-center"
           >
             <h2 className="text-2xl font-bold">Contact</h2>
             <p>
