@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Rohan Srivastava | Full-Stack Blockchain Developer",
+  title: "Rohan Srivastava | Portfolio",
   description:
     "Full-stack blockchain developer specializing in smart contracts, decentralized apps, and microservices for secure, scalable digital solutions.",
   keywords: [
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Rohan Srivastava | Full-Stack Blockchain Developer",
+    title: "Rohan Srivastava | Portfolio",
     description:
       "Full-stack blockchain developer specializing in smart contracts, decentralized apps, and microservices for secure, scalable digital solutions.",
     url: "https://rohan-srivastava.vercel.app",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
         url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Rohan Srivastava - Full-Stack Blockchain Developer",
+        alt: "Rohan Srivastava",
       },
     ],
     locale: "en_US",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rohan Srivastava | Full-Stack Blockchain Developer",
+    title: "Rohan Srivastava | Portfolio",
     description:
       "Full-stack blockchain developer specializing in smart contracts, decentralized apps, and microservices for secure, scalable digital solutions.",
     creator: "@etsrohan",
