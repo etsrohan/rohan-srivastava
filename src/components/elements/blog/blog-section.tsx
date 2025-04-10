@@ -1,28 +1,25 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { projectCategories, projects } from "./project-data";
+import { blogPosts, categories, Category } from "./blog-data";
 import {
+  backgroundElements,
   containerVariants,
   filterVariants,
-  backgroundElements,
 } from "./animation-variants";
-import { ProjectCard } from "./project-card";
+import { BlogCard } from "./blog-card";
 
-export function ProjectsSection() {
-  // Default to the first category instead of "All"
-  const [activeFilter, setActiveFilter] = useState(projectCategories[0].title);
+export function BlogSection() {
+  const [selectedCategory, setSelectedCategory] = useState<string>("medium");
 
-  // Filter projects based on selected category
-  const filteredProjects = projects.filter(
-    (project) => project.category === activeFilter
+  const filteredPosts = blogPosts.filter(
+    (post) => post.category === selectedCategory
   );
 
   return (
-    <section className="relative w-full py-24 overflow-hidden bg-black">
+    <section className="relative py-20 overflow-hidden w-full">
       {/* Background elements */}
       <div className="absolute inset-0 bg-black z-0">
         {/* Subtle green glow in the center */}
@@ -51,8 +48,7 @@ export function ProjectsSection() {
       {/* Radial gradient for the container to give a faded look */}
       <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center bg-black [mask-image:radial-gradient(ellipse_50%_50%_at_center,transparent_20%,black)]" />
 
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-4">
+      <div className="container relative z-10 max-w-7xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -61,50 +57,45 @@ export function ProjectsSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-b from-green-200 to-green-500 bg-clip-text text-transparent mb-4">
-            Featured Projects
+            Content & Media
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            A showcase of my recent work across various domains including
-            blockchain, web development, backend systems, and game development.
+            My articles on Medium and video tutorials on YouTube covering web
+            development, software engineering, and tech insights.
           </p>
         </motion.div>
 
-        {/* Filter Buttons */}
+        {/* Category Filters */}
         <motion.div
-          variants={filterVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="flex flex-wrap justify-center gap-3 mb-12"
+          variants={filterVariants}
+          className="flex flex-wrap justify-center gap-4 mb-12"
         >
-          {projectCategories.map((category, index) => (
+          {categories.map((category: Category) => (
             <Button
-              key={index}
-              variant={activeFilter === category.title ? "default" : "outline"}
-              className={cn(
-                "rounded-full transition-all duration-300 flex items-center gap-2",
-                activeFilter === category.title
-                  ? "bg-green-500 hover:bg-green-600 text-white"
-                  : "border-green-500/30 text-green-400 hover:bg-green-500/10"
-              )}
-              onClick={() => setActiveFilter(category.title)}
+              key={category.id}
+              variant={selectedCategory === category.id ? "default" : "outline"}
+              onClick={() => setSelectedCategory(category.id)}
+              className="rounded-full"
             >
-              {category.icon}
-              {category.title}
+              <category.icon className="w-4 h-4 mr-2" />
+              {category.name}
             </Button>
           ))}
         </motion.div>
 
-        {/* Projects Grid */}
+        {/* Blog Posts Grid */}
         <motion.div
-          variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto"
+          variants={containerVariants}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full"
         >
-          {filteredProjects.map((project, index) => (
-            <ProjectCard key={index} project={project} index={index} />
+          {filteredPosts.map((post, index) => (
+            <BlogCard key={index} post={post} index={index} />
           ))}
         </motion.div>
       </div>

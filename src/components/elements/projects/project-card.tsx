@@ -11,6 +11,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Project } from "./project-data";
+import Image from "next/image";
 
 interface ProjectCardProps {
   project: Project;
@@ -25,33 +26,29 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
-      <Card className="h-full backdrop-blur-sm bg-black/80 border border-green-500/20 hover:border-green-500/40 transition-all duration-300 hover:shadow-[0_0_20px_rgba(34,197,94,0.3)] hover:scale-[1.02] group overflow-hidden">
+      <Card className="h-full bg-black/80 border border-green-500/20 hover:border-green-500/40 transition-all duration-300 hover:shadow-[0_0_20px_rgba(34,197,94,0.3)] group overflow-hidden p-0">
         {/* Project Image */}
         <div className="relative h-48 w-full overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/80 z-10" />
-          <div className="absolute inset-0 bg-gray-800 flex items-center justify-center">
-            <p className="text-gray-400 text-center p-4">Project Image</p>
-          </div>
-          {/* Uncomment when you have actual images */}
-          {/* <Image 
-            src={project.image} 
-            alt={project.title} 
-            fill 
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
             className="object-cover transition-transform duration-500 group-hover:scale-110"
-          /> */}
+          />
 
           {/* Category Badge */}
           <div className="absolute top-4 right-4 z-20">
             <Badge
               variant="secondary"
-              className="bg-green-500/20 text-green-200 border border-green-500/30"
+              className="bg-green-800/60 text-green-200 border border-green-500/30"
             >
               {project.category}
             </Badge>
           </div>
         </div>
 
-        <CardHeader>
+        <CardHeader className="pt-4">
           <CardTitle className="text-xl font-bold text-green-400 group-hover:text-green-300 transition-colors duration-300">
             {project.title}
           </CardTitle>
@@ -76,7 +73,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           </div>
         </CardContent>
 
-        <CardFooter className="flex justify-end gap-2 pt-2">
+        <CardFooter className="flex justify-end gap-2 pt-2 pb-4">
           {project.links.map((link, linkIndex: number) => (
             <a
               key={linkIndex}

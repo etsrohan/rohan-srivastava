@@ -2,6 +2,9 @@ import { ExperienceSection } from "@/components/elements/experience/experience-s
 import { HeroSection } from "@/components/elements/hero/hero-section";
 import { SkillsSection } from "@/components/elements/skill/skills-section";
 import { ProjectsSection } from "@/components/elements/projects/projects-section";
+import { BlogSection } from "@/components/elements/blog/blog-section";
+import { ContactSection } from "@/components/elements/contact/contact-section";
+
 export default function Home() {
   return (
     <>
@@ -44,11 +47,7 @@ export default function Home() {
             id="blog"
             className="w-full h-auto p-0 m-0 flex flex-col justify-center items-center"
           >
-            <h2 className="text-2xl font-bold">Blog</h2>
-            <p>
-              Read my latest articles and insights on web development,
-              technology trends, and software engineering.
-            </p>
+            <BlogSection />
           </section>
 
           {/* Contact Section */}
@@ -56,33 +55,7 @@ export default function Home() {
             id="contact"
             className="w-full h-auto p-0 m-0 flex flex-col justify-center items-center"
           >
-            <h2 className="text-2xl font-bold">Contact</h2>
-            <p>
-              If you’d like to get in touch, feel free to send me a message
-              using the form below.
-            </p>
-            <form className="flex flex-col gap-4">
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="p-2 border border-gray-300 rounded"
-              />
-              <input
-                type="email"
-                placeholder="Your Email"
-                className="p-2 border border-gray-300 rounded"
-              />
-              <textarea
-                placeholder="Your Message"
-                className="p-2 border border-gray-300 rounded"
-              ></textarea>
-              <button
-                type="submit"
-                className="px-4 py-2 bg-blue-500 text-white rounded"
-              >
-                Send Message
-              </button>
-            </form>
+            <ContactSection />
           </section>
         </main>
       </div>

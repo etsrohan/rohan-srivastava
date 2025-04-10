@@ -1,5 +1,11 @@
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-import { FaServer, FaDatabase, FaLayerGroup, FaGamepad } from "react-icons/fa6";
+import {
+  FaServer,
+  FaDatabase,
+  FaLayerGroup,
+  FaGamepad,
+  FaAndroid,
+} from "react-icons/fa6";
 
 export interface Project {
   title: string;
@@ -27,7 +33,7 @@ export const projectCategories = [
     icon: <FaDatabase className="text-green-500" size={24} />,
   },
   {
-    title: "Web Development",
+    title: "Frontend",
     icon: <FaLayerGroup className="text-green-500" size={24} />,
   },
   {
@@ -41,24 +47,24 @@ export const projects = [
   {
     title: "Token Money Magnet App",
     description:
-      "A blockchain-based token and airdrop system with smart contracts developed in Golang and integrated with a Nest.js backend. Features include token distribution, airdrop management, and user wallet integration.",
+      "Developed the TMM token and airdrop system with smart contracts written in Golang and integrated with a Nest.js backend. Features include token distribution, airdrop management, and user wallet integration.",
     image: "/images/projects/tmm-app.jpg",
     category: "Blockchain",
     technologies: ["Golang", "NestJS", "Solidity", "MongoDB", "Web3.js"],
     links: [
       {
-        name: "GitHub",
-        url: "https://github.com/etsrohan/token-money-magnet",
+        name: "Android App",
+        url: "https://play.google.com/store/apps/details?id=com.tmm.user",
         icon: (
-          <FaGithub className="text-gray-200 hover:text-purple-500" size={20} />
+          <FaAndroid className="text-gray-200 hover:text-green-500" size={20} />
         ),
       },
       {
-        name: "Live Demo",
-        url: "https://tmm.example.com",
+        name: "Article",
+        url: "https://www.wionews.com/token-money-magnet",
         icon: (
           <FaExternalLinkAlt
-            className="text-gray-200 hover:text-blue-500"
+            className="text-gray-200 hover:text-green-500"
             size={20}
           />
         ),
@@ -68,7 +74,7 @@ export const projects = [
   {
     title: "Kalp Studio API Gateway",
     description:
-      "A microservice that extracts solidity-like ABI.json using Express.js and Golang. Integrated with fabric-network and Hashicorp Vault for secure identity management and access control.",
+      "Developed a microservice that extracts solidity-like ABI.json using Express.js and Golang. Generates automatic routes for easy integration of any smart contract with any frontend. Integrated with fabric-network and Hashicorp Vault for secure identity management and access control.",
     image: "/images/projects/api-gateway.jpg",
     category: "Backend",
     technologies: [
@@ -80,10 +86,13 @@ export const projects = [
     ],
     links: [
       {
-        name: "GitHub",
-        url: "https://github.com/etsrohan/kalp-api-gateway",
+        name: "Kalp Studio",
+        url: "https://console.kalp.studio/smart-contract-app/api-gateway",
         icon: (
-          <FaGithub className="text-gray-200 hover:text-purple-500" size={20} />
+          <FaExternalLinkAlt
+            className="text-gray-200 hover:text-green-500"
+            size={20}
+          />
         ),
       },
     ],
@@ -91,19 +100,18 @@ export const projects = [
   {
     title: "Notification Engine",
     description:
-      "A high-throughput notification service built with TypeScript, Node.js, MongoDB, and RabbitMQ. Handles millions of notifications with real-time delivery and analytics.",
+      "A high-throughput notification service built with TypeScript, Node.js, MongoDB, Redis, Amazon S3, and RabbitMQ. Handles millions of notifications with real-time delivery and analytics. Not able to share the code due to being part of a private codebase for Mai Labs. This is mostly used internally, and is used in the TMM app as well Kalp Studio.",
     image: "/images/projects/notification-engine.jpg",
     category: "Backend",
-    technologies: ["TypeScript", "Node.js", "MongoDB", "RabbitMQ", "Redis"],
-    links: [
-      {
-        name: "GitHub",
-        url: "https://github.com/etsrohan/notification-engine",
-        icon: (
-          <FaGithub className="text-gray-200 hover:text-purple-500" size={20} />
-        ),
-      },
+    technologies: [
+      "TypeScript",
+      "Node.js",
+      "MongoDB",
+      "Redis",
+      "Amazon S3",
+      "RabbitMQ",
     ],
+    links: [],
   },
   {
     title: "Poket App",
@@ -114,18 +122,11 @@ export const projects = [
     technologies: ["Solidity", "Hardhat", "Express.js", "MongoDB", "Web3.js"],
     links: [
       {
-        name: "GitHub",
-        url: "https://github.com/etsrohan/poket-app",
-        icon: (
-          <FaGithub className="text-gray-200 hover:text-purple-500" size={20} />
-        ),
-      },
-      {
-        name: "Live Demo",
-        url: "https://poket.example.com",
+        name: "Website",
+        url: "https://poket.finance",
         icon: (
           <FaExternalLinkAlt
-            className="text-gray-200 hover:text-blue-500"
+            className="text-gray-200 hover:text-green-500"
             size={20}
           />
         ),
@@ -133,35 +134,27 @@ export const projects = [
     ],
   },
   {
-    title: "Arcade Network",
-    description:
-      "A staking contract on Polygon with vesting schedules and rewards distribution. Includes a frontend dashboard for users to manage their staked tokens.",
-    image: "/images/projects/arcade-network.jpg",
-    category: "Blockchain",
-    technologies: ["Solidity", "Hardhat", "React", "TypeScript", "Web3.js"],
-    links: [
-      {
-        name: "GitHub",
-        url: "https://github.com/etsrohan/arcade-network",
-        icon: (
-          <FaGithub className="text-gray-200 hover:text-purple-500" size={20} />
-        ),
-      },
-    ],
-  },
-  {
     title: "Chumbi Valley",
     description:
-      "A blockchain game with ERC-20 tokens for pets, ERC-1155 for items and chests, and a breeding contract where two parents are required to breed new pets.",
+      "A blockchain game with ERC-721 tokens for pets, ERC-1155 for items and chests, and a breeding contract where two parents are required to breed new pets. Not able to share the code due to being part of a private codebase for NonceBlox.",
     image: "/images/projects/chumbi-valley.jpg",
-    category: "Game Development",
-    technologies: ["Unity", "C#", "Solidity", "Web3.js", "ERC-20", "ERC-1155"],
+    category: "Blockchain",
+    technologies: [
+      "Solidity",
+      "Hardhat",
+      "ERC-20",
+      "ERC-1155",
+      "Breeding Contract",
+    ],
     links: [
       {
-        name: "GitHub",
-        url: "https://github.com/etsrohan/chumbi-valley",
+        name: "Website",
+        url: "https://chumbivalley.com/",
         icon: (
-          <FaGithub className="text-gray-200 hover:text-purple-500" size={20} />
+          <FaExternalLinkAlt
+            className="text-gray-200 hover:text-green-500"
+            size={20}
+          />
         ),
       },
     ],
@@ -176,9 +169,9 @@ export const projects = [
     links: [
       {
         name: "GitHub",
-        url: "https://github.com/etsrohan/ev-charging",
+        url: "https://github.com/etsrohan/blockchain-EVCS",
         icon: (
-          <FaGithub className="text-gray-200 hover:text-purple-500" size={20} />
+          <FaGithub className="text-gray-200 hover:text-green-500" size={20} />
         ),
       },
     ],
@@ -188,14 +181,72 @@ export const projects = [
     description:
       "Smart contracts implementing ABAC into Solidity with bloom filters for identity checks. Includes test automation with PyTest, threading, and asyncio.",
     image: "/images/projects/abac.jpg",
-    category: "Backend",
+    category: "Blockchain",
     technologies: ["Solidity", "Python", "Bloom Filters", "PyTest", "asyncio"],
     links: [
       {
         name: "GitHub",
-        url: "https://github.com/etsrohan/abac",
+        url: "https://github.com/etsrohan/blockchain-ABAC",
         icon: (
-          <FaGithub className="text-gray-200 hover:text-purple-500" size={20} />
+          <FaGithub className="text-gray-200 hover:text-green-500" size={20} />
+        ),
+      },
+    ],
+  },
+  {
+    title: "Metafinity",
+    description:
+      "Frontend for Metafinity Games. A website featuring all their latest and featured games, about the company, and a contact section.",
+    image: "/images/projects/metafinity.jpg",
+    category: "Frontend",
+    technologies: [
+      "Next.js",
+      "Tailwind CSS",
+      "TypeScript",
+      "React",
+      "Node.js",
+      "Shadcn UI",
+    ],
+    links: [
+      {
+        name: "Website",
+        url: "https://metafinity.space",
+        icon: (
+          <FaExternalLinkAlt
+            className="text-gray-200 hover:text-green-500"
+            size={20}
+          />
+        ),
+      },
+    ],
+  },
+  {
+    title: "Pocket Carrom",
+    description:
+      "Used Unity to create a 2D carrom game with realistic physics and animations. Playable on Android. Play against the computer or with your friends.",
+    image: "/images/projects/pocket-carrom.jpg",
+    category: "Game Development",
+    technologies: [
+      "Next.js",
+      "Tailwind CSS",
+      "TypeScript",
+      "React",
+      "Node.js",
+      "Shadcn UI",
+    ],
+    links: [
+      {
+        name: "Website",
+        url: "https://github.com/etsrohan/pocket-carrom",
+        icon: (
+          <FaGithub className="text-gray-200 hover:text-green-500" size={20} />
+        ),
+      },
+      {
+        name: "Android",
+        url: "https://play.google.com/store/apps/details?id=com.Metafinity.PocketCarrom",
+        icon: (
+          <FaAndroid className="text-gray-200 hover:text-green-500" size={20} />
         ),
       },
     ],
