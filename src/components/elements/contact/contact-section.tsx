@@ -2,7 +2,14 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { FaEnvelope, FaPhone, FaCopy, FaCheck } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaPhone,
+  FaMapMarkerAlt,
+  FaCopy,
+  FaCheck,
+  FaDownload,
+} from "react-icons/fa";
 import {
   FaXTwitter,
   FaGithub,
@@ -113,6 +120,23 @@ export function ContactSection() {
                   />
                 )}
               </button>
+            </div>
+
+            <div className="flex items-center gap-3 p-4 rounded-lg bg-black/40 border border-green-500/10 hover:border-green-500/20 transition-all duration-300">
+              <FaMapMarkerAlt className="text-green-400" size={20} />
+              <span className="text-gray-200">Noida, UP, India</span>
+            </div>
+
+            {/* Resume Download Button */}
+            <div className="mt-2">
+              <a
+                href="/Resume-Rohan_Srivastava.pdf"
+                download
+                className="flex items-center justify-center gap-2 w-full p-4 rounded-lg bg-green-500/10 hover:bg-green-500/20 border border-green-500/20 hover:border-green-500/40 transition-all duration-300 text-green-400 hover:text-green-300"
+              >
+                <FaDownload className="text-green-400" size={18} />
+                <span>Download Resume</span>
+              </a>
             </div>
           </div>
           {/* Social Links */}
