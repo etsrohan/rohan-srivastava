@@ -84,12 +84,12 @@ export function ProjectsSection() {
               className={cn(
                 "rounded-full transition-all duration-300 flex items-center gap-2",
                 activeFilter === category.title
-                  ? "bg-green-500 hover:bg-green-600 text-white"
-                  : "border-green-500/30 text-green-400 hover:bg-green-500/10"
+                  ? "bg-green-400 hover:bg-green-500 text-black"
+                  : "border-green-500/50 text-green-400 hover:bg-green-500/15 hover:text-green-400"
               )}
               onClick={() => setActiveFilter(category.title)}
             >
-              {category.icon}
+              <category.icon className="w-4 h-4 mr-2" />
               {category.title}
             </Button>
           ))}

@@ -42,7 +42,7 @@ export function HeroSection() {
           {/* Text and Links */}
           <div className="flex flex-col items-start text-left max-w-xl px-4">
             <p className="text-gray-200 text-2xl mt-1 pb-0 sm:text-3xl md:text-4xl px-1">
-              Hi, my name is
+              Hi, I am
             </p>
             <p className="bg-gradient-to-b from-green-200 to-green-500 bg-clip-text pb-0 pt-0 text-5xl font-bold text-transparent sm:text-6xl md:text-7xl">
               Rohan Srivastava

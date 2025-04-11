@@ -26,19 +26,19 @@ export interface ProjectLink {
 export const projectCategories = [
   {
     title: "Backend",
-    icon: <FaServer className="text-green-500" size={24} />,
+    icon: FaServer,
   },
   {
     title: "Blockchain",
-    icon: <FaDatabase className="text-green-500" size={24} />,
+    icon: FaDatabase,
   },
   {
     title: "Frontend",
-    icon: <FaLayerGroup className="text-green-500" size={24} />,
+    icon: FaLayerGroup,
   },
   {
     title: "Game Development",
-    icon: <FaGamepad className="text-green-500" size={24} />,
+    icon: FaGamepad,
   },
 ];
 
